@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1428</width>
+    <height>473</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>1011</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_n">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>40</y>
+      <width>42</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>512</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_rand">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>90</y>
+      <width>141</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>rearrangment</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>low</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>high</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>standart</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_proc">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>310</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start/Restart</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_delay">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>130</y>
+      <width>42</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_sort">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>170</y>
+      <width>141</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Bubble sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cocktail sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Comb sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Insertion sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gnome sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Counting sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bucket sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bogosort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rearragement sort</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Timsort</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_pause">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>350</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pause/Continue</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_abort">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>390</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Abort</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_read">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>210</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_write">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>240</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_compare">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>270</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>40</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Array size:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>90</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Random array policy:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>130</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delay (ms):</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>170</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sorting algotiyhm:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_compare_2">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>270</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Compares done:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_write_2">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>240</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Write access:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_read_2">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>210</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Read asccess:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1428</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
