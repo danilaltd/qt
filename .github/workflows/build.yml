@@ -45,7 +45,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: kurs-windows
-        path: |
-          src/release/kurs.exe
-          src/release/*.dll
-          src/release/platforms
+        path: src/release/
+
