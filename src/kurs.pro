@@ -19,16 +19,7 @@ FORMS += \
     mainwindow.ui
 
 # Удаляем Qt EntryPoint, если он был добавлен
-# LIBS -= -lQt6EntryPoint
-
-# Добавляем системные библиотеки для MinGW
-LIBS += "-Wl,--start-group" \
-        "D:/a/qt/qt/Qt/6.8.3/mingw_64/lib/libQt6Widgets.a" \
-        "D:/a/qt/qt/Qt/6.8.3/mingw_64/lib/libQt6Gui.a" \
-        "D:/a/qt/qt/Qt/6.8.3/mingw_64/lib/libQt6Core.a" \
-        "D:/a/qt/qt/Qt/6.8.3/mingw_64/lib/libQt6EntryPoint.a" \
-        -lmingw32 -lmingwex -lshell32 \
-        "-Wl,--end-group"
+CONFIG -= entrypoint
 
 
 # Default rules for deployment.
