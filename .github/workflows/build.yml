@@ -25,6 +25,13 @@ jobs:
     - name: Add Qt to PATH
       run: echo "${{ github.workspace }}\\Qt\\6.8.3\\mingw_64\\bin" | Out-File -Append $env:GITHUB_PATH
 
+    - name: Display config
+      run: |
+        echo "Qt version:"
+        ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/qmake -v
+        echo "G++ version:"
+        g++ --version
+
     - name: Build with mingw32-make
       run: mingw32-make
 
