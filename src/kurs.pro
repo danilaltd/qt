@@ -18,6 +18,12 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
+# Удаляем Qt EntryPoint, если он был добавлен
+# LIBS -= -lQt6EntryPoint
+
+# Добавляем системные библиотеки для MinGW
+LIBS += -lmingw32 -lmingwex -lshell32
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
