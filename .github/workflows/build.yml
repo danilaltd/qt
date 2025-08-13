@@ -22,9 +22,12 @@ jobs:
       run: |
         ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/qmake src/kurs.pro
 
+    - name: Add Qt to PATH
+      run: echo "${{ github.workspace }}\\Qt\\6.8.3\\mingw_64\\bin" | Out-File -Append $env:GITHUB_PATH
+
     - name: Build with mingw32-make
-      run: |
-        ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/mingw32-make
+      run: mingw32-make
+
 
     # Optional: Deploy with windeployqt (requires Qt tools in PATH)
     # - name: Deploy with windeployqt
