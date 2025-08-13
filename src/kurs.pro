@@ -22,7 +22,14 @@ FORMS += \
 # LIBS -= -lQt6EntryPoint
 
 # Добавляем системные библиотеки для MinGW
-QMAKE_LFLAGS += -lmingw32 -lmingwex -lshell32
+LIBS += "-Wl,--start-group" \
+        "D:/a/qt/qt/Qt/6.8.3/mingw_64/lib/libQt6Widgets.a" \
+        "D:/a/qt/qt/Qt/6.8.3/mingw_64/lib/libQt6Gui.a" \
+        "D:/a/qt/qt/Qt/6.8.3/mingw_64/lib/libQt6Core.a" \
+        "D:/a/qt/qt/Qt/6.8.3/mingw_64/lib/libQt6EntryPoint.a" \
+        -lmingw32 -lmingwex -lshell32 \
+        "-Wl,--end-group"
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
