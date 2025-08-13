@@ -35,6 +35,9 @@ jobs:
     - name: Build with mingw32-make
       run: mingw32-make
 
+    - name: List build output
+      run: |
+        Get-ChildItem -Recurse
 
     # Optional: Deploy with windeployqt (requires Qt tools in PATH)
     # - name: Deploy with windeployqt
