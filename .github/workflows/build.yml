@@ -19,7 +19,7 @@ jobs:
         version: '6.8.3'  # или нужная версия
         host: 'windows'
         target: 'desktop'
-        arch: 'win64_msvc2022_arm64'
+        arch: 'win64_msvc2022_64'
 
     - name: Configure with qmake
       run: qmake src/kurs.pro
