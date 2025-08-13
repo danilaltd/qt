@@ -19,20 +19,17 @@ jobs:
         aqt install-qt windows desktop 6.8.3 win64_mingw --outputdir ${{ github.workspace }}/Qt
 
     - name: Configure with qmake
-      run: ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/qmake src/kurs.pro
-
-    - name: Build with make
       run: |
-        if exist Makefile (
-          nmake
-        ) else (
-          echo "Makefile not found"
-          exit 1
-        )
+        ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/qmake src/kurs.pro
 
-    - name: Deploy with windeployqt
+    - name: Build with mingw32-make
       run: |
-        windeployqt src/release/kurs.exe
+        ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/mingw32-make
+
+    # Optional: Deploy with windeployqt (requires Qt tools in PATH)
+    # - name: Deploy with windeployqt
+    #   run: |
+    #     ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/windeployqt src/release/kurs.exe
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
