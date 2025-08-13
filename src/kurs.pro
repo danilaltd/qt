@@ -22,7 +22,7 @@ FORMS += \
 # LIBS -= -lQt6EntryPoint
 
 # Добавляем системные библиотеки для MinGW
-LIBS += -lmingw32 -lmingwex -lshell32
+QMAKE_LFLAGS += -lmingw32 -lmingwex -lshell32
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
