@@ -38,7 +38,7 @@ jobs:
         windeployqt src/release/kurs.exe
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: kurs-windows
         path: |
