@@ -40,9 +40,10 @@ jobs:
     #    Get-ChildItem -Recurse
 
     # Optional: Deploy with windeployqt (requires Qt tools in PATH)
-    # - name: Deploy with windeployqt
-    #   run: |
-    #     ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/windeployqt src/release/kurs.exe
+    - name: Deploy with windeployqt
+      run: |
+        ${{ github.workspace }}/Qt/6.8.3/mingw_64/bin/windeployqt --release --dir release release/kurs.exe
+
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
